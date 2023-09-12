@@ -1,0 +1,12 @@
+<Company>
+    <Employee>
+        <SSN name='texto'>111111111</SSN>
+        <Dependent name='texto2' model='child'>
+            <SSN>222222222</SSN>
+        </Dependent>
+        <Fruit>
+            <Banana>555555555</Banana>
+            <Perl>444444444</Perl>
+        </Fruit>
+    </Employee>
+</Company>

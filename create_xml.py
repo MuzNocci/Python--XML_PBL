@@ -1,6 +1,7 @@
 from xml.etree.ElementTree import Element, ElementTree
 
 
+
 instrumento = Element('Instrumento', tipo='Violão', status='Disponível')
 
 yamaha = Element('Yamaha', cor="Marrom")
@@ -14,5 +15,6 @@ instrumento.append(memphis)
 instrumento.append(gianini)
 instrumento.append(tagima)
 instrumento.append(gibson)
+
 
 ElementTree(instrumento).write('create_xml.xml')

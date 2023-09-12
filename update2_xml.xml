@@ -1,0 +1,12 @@
+<Company name="Nome da empresa">
+    <Employee name="Nome do funcion&#225;rio" idade="37">
+        <EESSNN name="Teste">9999999999999</EESSNN>
+        <Dependent name="Teste2" model="child">
+            <SSN>222222222</SSN>
+        </Dependent>
+        <Fruit>
+            <Mango>888888888</Mango>
+            <Perl>444444444</Perl>
+        </Fruit>
+    </Employee>
+<Icecream>Morango</Icecream></Company>
