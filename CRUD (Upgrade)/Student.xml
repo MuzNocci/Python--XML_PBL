@@ -1,0 +1,18 @@
+<contacts>
+    <contact>
+        <id name="id">1</id>
+        <name name="name">Roger Barnes</name>
+        <address name="address">44 bettysmead, Redruth, Cornwall</address>
+        <phone name="phone">407562 3346826</phone>
+        <email name="email">roger@hotmail.com</email>
+        <age name="age">18</age>
+    </contact>
+    <contact>
+        <id name="id">2</id>
+        <name name="name">Trevor Ayres</name>
+        <address name="address">37 The Drive, Harold Hill, Essex</address>
+        <phone name="phone">01723 123865</phone>
+        <email name="email">trevor@abc.com</email>
+        <age name="age">19</age>
+    </contact>
+</contacts>
