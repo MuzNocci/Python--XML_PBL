@@ -42,5 +42,4 @@ def showStudent(id):
 
 
 showAllStudents()
-
 #showStudent(1)
