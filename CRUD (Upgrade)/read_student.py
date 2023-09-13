@@ -29,7 +29,7 @@ def showStudent(id):
         if id-1 == i:
 
             print('###############################')
-            print(f'Contato: 0{i+1}')
+            print(f'Contato: 0{id}')
             print(f'Nome do estudante: {root[i][1].text.capitalize()}')
             print(f'Endereço: {root[i][2].text}')
             print(f'Telefone: {root[i][3].text}')
@@ -41,5 +41,5 @@ def showStudent(id):
 
 
 
-showAllStudents()
-#showStudent(1)
+#showAllStudents()
+showStudent(2)
