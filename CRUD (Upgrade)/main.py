@@ -2,6 +2,7 @@ import os
 import student as ST
 
 
+
 class main:
 
 
@@ -11,7 +12,7 @@ class main:
 
         print('############################################')
         print('Welcome to Student Registration  1.0')
-        print('############################################')
+        print('############################################\n')
 
         self.mainPage()
 
@@ -40,7 +41,7 @@ class main:
         print('2 - Show Students')
         print('3 - Search Student')
 
-        self.pagination(int(input('Type the number of the option: ')))
+        self.pagination(int(input('\nEnter the option number: ')))
 
 
     def registerStudent(self):
