@@ -116,20 +116,39 @@ class student:
             i = 0
             for contact in root.findall('.//contact'):
 
-                if root[i][self.option].text == str(text):
-                    print('###############################')
-                    print(f'Contato: {root[i][0].text}')
-                    print(f'Nome do estudante: {root[i][1].text.capitalize()}')
-                    print(f'Endereço: {root[i][2].text}')
-                    print(f'Telefone: {root[i][3].text}')
-                    print(f'E-mail: {root[i][4].text}')
-                    print(f'Idade: {root[i][5].text}')
-                    print('###############################')
+                if self.option == 1:
 
-                else:
-                    print('There are no registered student with the data provided.')
+                    if str(text).lower() in root[i][1].text.lower():
+                        print('###############################')
+                        print(f'Contato: {root[i][0].text}')
+                        print(f'Nome do estudante: {root[i][1].text}')
+                        print(f'Endereço: {root[i][2].text}')
+                        print(f'Telefone: {root[i][3].text}')
+                        print(f'E-mail: {root[i][4].text}')
+                        print(f'Idade: {root[i][5].text}')
+                        print('###############################')
 
-                i += 1
+                    else:
+                        print('There are no registered student with the data provided.')
+
+                    i += 1
+
+                else: 
+
+                    if root[i][self.option].text == str(text):
+                        print('###############################')
+                        print(f'Contato: {root[i][0].text}')
+                        print(f'Nome do estudante: {root[i][1].text}')
+                        print(f'Endereço: {root[i][2].text}')
+                        print(f'Telefone: {root[i][3].text}')
+                        print(f'E-mail: {root[i][4].text}')
+                        print(f'Idade: {root[i][5].text}')
+                        print('###############################')
+
+                    else:
+                        print('There are no registered student with the data provided.')
+
+                    i += 1
 
         except:
 
