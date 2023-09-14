@@ -50,6 +50,7 @@ class main:
 
     def registerStudentPage(self):
 
+        print('Enter student details:\n')
         self.id = str(ST.student.counterStudent(self))
         self.name = input('Student name: ')
         self.address = input('Student address (city / state): ')
