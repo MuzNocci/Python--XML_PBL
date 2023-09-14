@@ -42,6 +42,25 @@ class student:
             print('New student registered.')
 
 
+    def newIDStudent(self):
+
+        try:
+
+            file = ET.parse('Students.xml')
+            root = file.getroot()
+
+            for contact in root.findall('.//contact/'):
+                if contact.tag == 'id':
+                    newId = int(contact.text)+1
+
+            return newId
+        
+        except:
+
+            return 1
+
+
+
     def counterStudent(self):
 
         try:
@@ -68,7 +87,7 @@ class student:
 
             print('###############################')
             for i in range(student.counterStudent(self)-1):
-                print(f'Contato: {i+1}')
+                print(f'Contato: {root[i][0].text}')
                 print(f'Nome do estudante: {root[i][1].text.capitalize()}')
                 print(f'Endereço: {root[i][2].text}')
                 print(f'Telefone: {root[i][3].text}')
@@ -117,9 +136,31 @@ class student:
             print('There are no registered students.')
 
 
-    def updateStudent(self):
-        ...
+    def updateStudent(self, id):
+
+        file = ET.parse('Students.xml')
+        root = file.getroot()
+
+        for item in root.findall('.//contact'):
+            if item.attrib['id'] == id:
+                for items in item:
+                    if items.tag != 'id':
+                        items.text = input(f'Student {items.tag}: ')
+
+        file.write('Students.xml')
+
+        print('\nStudent updated.\n')
 
 
-    def deleteStudent(self):
-        ...
+    def deleteStudent(self, id):
+        
+        file = ET.parse('Students.xml')
+        root = file.getroot()
+
+        for item in root.findall('.//contact'):
+            if item.attrib['id'] == id:
+                root.remove(item)
+
+        file.write('Students.xml')
+
+        print('Student deleted.\n')
