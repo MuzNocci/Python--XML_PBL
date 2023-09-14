@@ -1,3 +1,4 @@
+import os
 import xml.etree.ElementTree as ET
 
 
@@ -43,14 +44,19 @@ class student:
 
     def counterStudent(self):
 
-        file = ET.parse('Students.xml')
-        root = file.getroot()
+        try:
+            file = ET.parse('Students.xml')
+            root = file.getroot()
 
-        counter = 0
-        for contact in root.findall('.//contact'):
-            counter += 1
+            counter = 1
+            for contact in root.findall('.//contact'):
+                counter += 1
 
-        return counter
+            return counter
+        
+        except:
+
+            return 1
         
 
     def showAllStudents(self):
@@ -61,8 +67,8 @@ class student:
             root = file.getroot()
 
             print('###############################')
-            for i in range(student.counterStudent(self)):
-                print(f'Contato: 0{i+1}')
+            for i in range(student.counterStudent(self)-1):
+                print(f'Contato: {i+1}')
                 print(f'Nome do estudante: {root[i][1].text.capitalize()}')
                 print(f'Endereço: {root[i][2].text}')
                 print(f'Telefone: {root[i][3].text}')
@@ -75,24 +81,45 @@ class student:
             print('There are no registered students .')
 
 
-    def showStudent(self, id):
+    def showStudent(self, opt, text):
 
-        file = ET.parse('Students.xml')
-        root = file.getroot()
+        os.system('clear')
 
-        i = 0
-        for contact in root.findall('.//contact'):
+        try:
+            file = ET.parse('Students.xml')
+            root = file.getroot()
 
-            if id-1 == i:
+            match int(opt):
+                case 1: self.option = 0
+                case 2: self.option = 1
+                case 3: self.option = 4
 
-                print('###############################')
-                print(f'Contato: 0{id}')
-                print(f'Nome do estudante: {root[i][1].text.capitalize()}')
-                print(f'Endereço: {root[i][2].text}')
-                print(f'Telefone: {root[i][3].text}')
-                print(f'E-mail: {root[i][4].text}')
-                print(f'Idade: {root[i][5].text}')
-                print('###############################')
-                
-            i =+ 1
-            
+            i = 0
+            for contact in root.findall('.//contact'):
+
+                if root[i][self.option].text == str(text):
+                    print('###############################')
+                    print(f'Contato: {root[i][0].text}')
+                    print(f'Nome do estudante: {root[i][1].text.capitalize()}')
+                    print(f'Endereço: {root[i][2].text}')
+                    print(f'Telefone: {root[i][3].text}')
+                    print(f'E-mail: {root[i][4].text}')
+                    print(f'Idade: {root[i][5].text}')
+                    print('###############################')
+
+                else:
+                    print('There are no registered student with the data provided.')
+
+                i += 1
+
+        except:
+
+            print('There are no registered students.')
+
+
+    def updateStudent(self):
+        ...
+
+
+    def deleteStudent(self):
+        ...

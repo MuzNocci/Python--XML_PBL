@@ -22,14 +22,16 @@ class main:
         os.system('clear')
 
         match selected:
-
             case 1:
-                self.registerStudent()
+                self.registerStudentPage()
             case 2:
                 ST.student.showAllStudents(self)
+            case 3:
+                self.searchStudentPage()
+            case 4:
+                ST.student.deleteStudent(self)
             case '':
                 self.mainPage()
-
 
         self.__init__() if input('Choose other action? (Y/N) ').upper() == 'Y' else os.system('exit')
 
@@ -40,11 +42,13 @@ class main:
         print('1 - Register Student')
         print('2 - Show Students')
         print('3 - Search Student')
+        #print('4 - Update Student')
+        #print('5 - Delete Student')
 
-        self.pagination(int(input('\nEnter the option number: ')))
+        self.pagination(int(input('\nEnter option number: ')))
 
 
-    def registerStudent(self):
+    def registerStudentPage(self):
 
         self.id = str(ST.student.counterStudent(self))
         self.name = input('Student name: ')
@@ -55,6 +59,20 @@ class main:
 
         ST.student.createStudent(self, self.id, self.name, self.address, self.phone, self.email, self.age)
 
+
+    def searchStudentPage(self):
+
+        print('Would you like to search for:\n')
+        print('1 - ID')
+        print('2 - Name')
+        print('3 - E-mail')
+
+        option = input('\nEnter option number: ')
+        ST.student.showStudent(self, option, input('Enter text to search: '))
+
+
+    def updateStudentPage(self):
+        ...
 
 
 
