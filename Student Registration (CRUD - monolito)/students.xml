@@ -1,0 +1,10 @@
+<contacts>
+    <contact>
+        <id name="id">1</id>
+        <name name="name">Roger Barnes</name>
+        <address name="address">44 bettysmead, Redruth, Cornwall</address>
+        <phone name="phone">407562 3346826</phone>
+        <email name="email">roger@hotmail.com</email>
+        <age name="age">18</age>
+    </contact>
+    <contact id="3"><id name="id">3</id><name name="name">M&#252;ller Nocciolli</name><address name="address">Campos dos Goytacazes, Rio de Janeiro, Brazil</address><phone name="phone">22 988066987</phone><email name="email">muller.nocciolli@gmail.com</email><age name="age">37</age></contact></contacts>

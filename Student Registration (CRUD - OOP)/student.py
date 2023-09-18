@@ -60,7 +60,6 @@ class student:
             return 1
 
 
-
     def counterStudent(self):
 
         try:
@@ -114,6 +113,7 @@ class student:
                 case 3: self.option = 4
 
             i = 0
+            founded = 0
             for contact in root.findall('.//contact'):
 
                 if self.option == 1:
@@ -127,9 +127,7 @@ class student:
                         print(f'E-mail: {root[i][4].text}')
                         print(f'Idade: {root[i][5].text}')
                         print('###############################')
-
-                    else:
-                        print('There are no registered student with the data provided.')
+                        founded += 1
 
                     i += 1
 
@@ -144,11 +142,13 @@ class student:
                         print(f'E-mail: {root[i][4].text}')
                         print(f'Idade: {root[i][5].text}')
                         print('###############################')
-
-                    else:
-                        print('There are no registered student with the data provided.')
+                        founded += 1
 
                     i += 1
+
+            if founded == 0:
+                print('There are no registered student with the data provided.')
+        
 
         except:
 
