@@ -49,11 +49,12 @@ class student:
             file = ET.parse('Students.xml')
             root = file.getroot()
 
-            for contact in root.findall('.//contact/'):
-                if contact.tag == 'id':
-                    newId = int(contact.text)+1
-
-            return newId
+            newId = 0
+            for contact in root.findall('contact'):
+                id = int(contact.find('id').text)
+                if id > newId:
+                    newId = id
+            return newId + 1
         
         except:
 
@@ -84,15 +85,15 @@ class student:
             file = ET.parse('Students.xml')
             root = file.getroot()
 
-            print('###############################')
-            for i in range(student.counterStudent(self)-1):
-                print(f'Contato: {root[i][0].text}')
-                print(f'Nome do estudante: {root[i][1].text.capitalize()}')
-                print(f'Endereço: {root[i][2].text}')
-                print(f'Telefone: {root[i][3].text}')
-                print(f'E-mail: {root[i][4].text}')
-                print(f'Idade: {root[i][5].text}')
-                print('###############################')
+            print('####################################################')
+            for contact in root.findall('.//contact'):
+                print(f'Id: {contact.find('id').text}')
+                print(f'Name: {contact.find('name').text}')
+                print(f'Address: {contact.find('address').text}')
+                print(f'Phone: {contact.find('phone').text}')
+                print(f'E-mail: {contact.find('email').text}')
+                print(f'Age: {contact.find('age').text}')
+                print('####################################################')
 
         except:
 
@@ -119,14 +120,14 @@ class student:
                 if self.option == 1:
 
                     if str(text).lower() in root[i][1].text.lower():
-                        print('###############################')
-                        print(f'Contato: {root[i][0].text}')
-                        print(f'Nome do estudante: {root[i][1].text}')
-                        print(f'Endereço: {root[i][2].text}')
-                        print(f'Telefone: {root[i][3].text}')
+                        print('####################################################')
+                        print(f'Id: {root[i][0].text}')
+                        print(f'Name: {root[i][1].text}')
+                        print(f'Address: {root[i][2].text}')
+                        print(f'Phone: {root[i][3].text}')
                         print(f'E-mail: {root[i][4].text}')
-                        print(f'Idade: {root[i][5].text}')
-                        print('###############################')
+                        print(f'Age: {root[i][5].text}')
+                        print('####################################################')
                         founded += 1
 
                     i += 1
@@ -134,21 +135,20 @@ class student:
                 else: 
 
                     if root[i][self.option].text == str(text):
-                        print('###############################')
-                        print(f'Contato: {root[i][0].text}')
-                        print(f'Nome do estudante: {root[i][1].text}')
-                        print(f'Endereço: {root[i][2].text}')
-                        print(f'Telefone: {root[i][3].text}')
+                        print('####################################################')
+                        print(f'Id: {root[i][0].text}')
+                        print(f'Name: {root[i][1].text}')
+                        print(f'Address: {root[i][2].text}')
+                        print(f'Phone: {root[i][3].text}')
                         print(f'E-mail: {root[i][4].text}')
-                        print(f'Idade: {root[i][5].text}')
-                        print('###############################')
+                        print(f'Age: {root[i][5].text}')
+                        print('####################################################')
                         founded += 1
 
                     i += 1
 
             if founded == 0:
                 print('There are no registered student with the data provided.')
-        
 
         except:
 
