@@ -62,8 +62,6 @@ class main:
             self.mainPage()
 
 
-
-
     def registerStudentPage(self):
 
         print('Enter student details:\n')
