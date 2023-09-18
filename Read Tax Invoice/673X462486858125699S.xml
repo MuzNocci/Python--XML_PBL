@@ -1,0 +1,110 @@
+<ConsultarNfeServPrestadoResposta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ListaNfeServPrestado xmlns="http://www.barueri.sp.gov.br/nfe">
+        <CompNfeServPrestado>
+            <NfeServPrestado>
+                <InfNfeServPrestado>
+                    <NumeroNfe>615071</NumeroNfe>
+                    <SerieNfe/>
+                    <DescricaoNfe>NOTA FISCAL ELETRÔNICA DE SERVICOS E FATURA</DescricaoNfe>
+                    <CodigoVerificacao>673X.4624.8685.8125699-S</CodigoVerificacao>
+                    <DataEmissao>2023-07-18T09:27:57</DataEmissao>
+                    <ValoresNfe>
+                        <BaseCalculo>44.07</BaseCalculo>
+                        <Aliquota>2</Aliquota>
+                        <ValorIss>0.88</ValorIss>
+                        <ValorLiquidoNfe>44.07</ValorLiquidoNfe>
+                    </ValoresNfe>
+                    <PrestadorServico>
+                        <IdentificacaoPrestador>
+                            <CpfCnpj>
+                                <Cnpj>00000017000140</Cnpj>
+                            </CpfCnpj>
+                            <InscricaoMunicipal>4AG4150</InscricaoMunicipal>
+                        </IdentificacaoPrestador>
+                    <RazaoSocial>WEMOBI</RazaoSocial>
+                    <Endereco>
+                    <Endereco>ALAMEDA</Endereco>
+                    <NumeroEndereco>45</NumeroEndereco>
+                    <Bairro>ALPHAVILLE</Bairro>
+                    <Cidade>BARUERI</Cidade>
+                    <Uf>SP</Uf>
+                    <Cep>06400000</Cep>
+                    </Endereco>
+                    <Contato/>
+                    </PrestadorServico>
+                    <DeclaracaoServicoPrestado>
+                    <InfDeclaracaoServicoPrestado>
+                    <Rps>
+                    <IdentificacaoRps>
+                    <Numero>0000617000</Numero>
+                    <Serie> </Serie>
+                    </IdentificacaoRps>
+                    <DataEmissao>2023-07-12T00:00:00</DataEmissao>
+                    </Rps>
+                    <Competencia>2023-07-12T00:00:00</Competencia>
+                    <ServicoPrestado>
+                    <ValoresServicoPrestado>
+                    <QuantidadeServico>1</QuantidadeServico>
+                    <ValorUnitarioServico>44.07</ValorUnitarioServico>
+                    <ValorServicos>44.07</ValorServicos>
+                    <ValorPis>0</ValorPis>
+                    <ValorCofins>0</ValorCofins>
+                    <ValorIr>0</ValorIr>
+                    <ValorCsll>0</ValorCsll>
+                    <ValTotTributos>0</ValTotTributos>
+                    <ValorIss>0.88</ValorIss>
+                    <ValorNaoBaseCalculo>0</ValorNaoBaseCalculo>
+                    <Aliquota>2</Aliquota>
+                    </ValoresServicoPrestado>
+                    <IssRetido>2</IssRetido>
+                    <CodigoServico>100503216</CodigoServico>
+                    <DescricaoServico>INTERMEDIAÇÃO DE NEGÓCIOS</DescricaoServico>
+                    <Discriminacao>TAXA DE SERVIÇO PRESTADO POR INTERMEDIAÇÃO DA COMPRA DE PASSAGEM VIA NOSSO SITE/APP EM 12.07.2023. NOTA FISCAL JÁ QUITADA NO ATO DA COMPRA.</Discriminacao>
+                    <Fatura>
+                    <NumeroFatura/>
+                    <ValorFatura>0,0000</ValorFatura>
+                    <FormaPagamentoFatura/>
+                    <ValorExtensoFatura/>
+                    </Fatura>
+                    <ObservacaoLocalTributado>ISSQN devido a: BARUERI-SP</ObservacaoLocalTributado>
+                    <ObservacaoRegimeEspecialTributacao/>
+                    </ServicoPrestado>
+                    <Prestador>
+                    <IdentificacaoPrestador>
+                    <CpfCnpj>
+                    <Cnpj>00000017000140</Cnpj>
+                    </CpfCnpj>
+                    <InscricaoMunicipal>0AG0000</InscricaoMunicipal>
+                    </IdentificacaoPrestador>
+                    </Prestador>
+                    <TomadorServico>
+                    <IdentificacaoTomador>
+                    <CpfCnpj>
+                    <Cpf>00000048854</Cpf>
+                    </CpfCnpj>
+                    </IdentificacaoTomador>
+                    <RazaoSocial>Muller Nocciolli</RazaoSocial>
+                    <Endereco>
+                    <Endereco>NÃO INFORMADO</Endereco>
+                    <NumeroEndereco>000000000</NumeroEndereco>
+                    <ComplementoEndereco/>
+                    <Bairro>NÃO INFORMADO</Bairro>
+                    <Cidade>BARUERI</Cidade>
+                    <Uf>SP</Uf>
+                    <Cep>00000000</Cep>
+                    </Endereco>
+                    <Contato>
+                    <Email>muller.nocciolli@gmail.com</Email>
+                    </Contato>
+                    </TomadorServico>
+                    </InfDeclaracaoServicoPrestado>
+                    </DeclaracaoServicoPrestado>
+                    <CartaCorrecao/>
+                    <CancelamentoNFe/>
+                </InfNfeServPrestado>
+            </NfeServPrestado>
+        </CompNfeServPrestado>
+        <Pagina>1</Pagina>
+        <Paginas>1</Paginas>
+    </ListaNfeServPrestado>
+</ConsultarNfeServPrestadoResposta>
